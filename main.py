@@ -124,20 +124,12 @@ def main(page: ft.Page):
             
     page.window.prevent_close = True
     page.window.on_event = handle_window_event
-    page.fonts={
-            "Kippax Modern" : "fonts/barselona.ttf",
-        }
     top_column=ft.Container(#begin=ft.alignment.center_left , end=ft.alignment.center_left
         gradient=ft.RadialGradient(radius = 5.8, colors=["#680630", "#06167D"]),
         content=ft.Column(controls=[
             ft.Text(""),
             ft.Row([
-                ft.Image(
-                    src="assets/images/logo.png",
-                    width=100,
-                    height=100,
-                    fit=ft.ImageFit.CONTAIN,
-                ),
+                
                 ft.Text("     "),
                 ft.Text(
                     spans=[
@@ -146,14 +138,9 @@ def main(page: ft.Page):
                             ft.TextStyle(
                                 size=55,
                                 decoration=ft.TextDecoration.UNDERLINE
-                                ))], font_family="Kippax Modern"),
+                                ))]),
                 ft.Text("     "),
-                ft.Image(
-                    src=f"assets/images/logo.png",
-                    width=100,
-                    height=100,
-                    fit=ft.ImageFit.CONTAIN,
-                ),
+                
 
                         
                 ],alignment=ft.MainAxisAlignment.CENTER),
@@ -171,7 +158,7 @@ def main(page: ft.Page):
                 indicator_color = "#680630",
                 label_text_style=ft.TextStyle(
                                 size=20,
-                                font_family="Kippax Modern"),
+                                ),
                 label_color="#0c2bf5",
                 unselected_label_color="#c20757",
                 
